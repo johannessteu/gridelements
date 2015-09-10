@@ -76,7 +76,7 @@ class WizardItems implements \TYPO3\CMS\Backend\Wizard\NewContentElementWizardHo
 	 */
 	public function manipulateWizardItems(&$wizardItems, &$parentObject) {
 		if (!GeneralUtility::inList($GLOBALS['BE_USER']->groupData['explicit_allowdeny'], 'tt_content:CType:gridelements_pi1:DENY')) {
-			$pageID = $parentObject->pageinfo['uid'];
+			$pageID = $parentObject->id;
 			$this->init($pageID);
 
 			$container = (int)GeneralUtility::_GP('tx_gridelements_container');
