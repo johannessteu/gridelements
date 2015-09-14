@@ -87,9 +87,11 @@ define(['jquery', 'TYPO3/CMS/Gridelements/GridElementsDragDrop', 'jquery-ui/sort
 	 */
 	DragInWizard.rearrangeItems = function() {
 		var panel = $('#' + DragInWizard.wizardIdentifier + ' .panel-body');
-		var descriptionWidth = panel.width() - 20
+		var descriptionWidth = panel.width() - 20;
+		var CType;
 		$('#' + DragInWizard.wizardIdentifier + ' .media').each(function() {
-			var CTypeCheck = $(this).find('input').attr('value').split('_');
+			var CTypeCheck = $(this).find('input').attr('value').match(/^([^_]*?)_(.*)$/);
+			CTypeCheck.shift();
 			if(CTypeCheck[0] === 'gridelements') {
 				CType = 'gridelements_pi1';
 				var txGridelementsBackendLayout = CTypeCheck[1];
