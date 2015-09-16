@@ -1,0 +1,12 @@
+{
+	"name": "gridelementsteam/gridelements",
+	"type": "typo3-cms-extension",
+	"description": "Gridelements Fork",
+	"homepage": "http://typo3.org",
+	"version": "4.0",
+	"autoload": {
+		"psr-4": {
+			"GridElementsTeam\\Gridelements\\": "Classes"
+		}
+	}
+}
