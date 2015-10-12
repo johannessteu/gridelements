@@ -8,5 +8,8 @@
 		"psr-4": {
 			"GridElementsTeam\\Gridelements\\": "Classes"
 		}
+	},
+	"replace": {
+		"gridelements": "self.version"
 	}
 }
